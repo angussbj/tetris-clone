@@ -82,7 +82,6 @@ export class Tetris {
 		for (const square of this.moving) {
 			square.y += 1
 		}
-		this.stepIntervalMillis /= 1.0001
 		this.render()
 	}
 
@@ -118,6 +117,7 @@ export class Tetris {
 					}
 				}
 				deleted += 1
+				this.stepIntervalMillis /= 1.08
 			}
 		}
 		this.score += deleted
